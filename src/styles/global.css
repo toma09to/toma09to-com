@@ -1,7 +1,7 @@
 @font-face {
   font-family: "NotoSansJP-Medium";
   font-weight: 500;
-  src: url("/NotoSansJP-Medium.ttf") format("truetype");
+  src: url("/fonts/NotoSansJP-Medium.ttf") format("truetype");
   font-display: swap;
 }
 
