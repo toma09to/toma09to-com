@@ -21,6 +21,18 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: forestgreen;
+  transition: .2s;
+}
+
+a:hover,
+a:focus {
+  color: tomato;
+  transition: .2s;
+}
+
 
 @keyframes open-blinder {
   100% {
@@ -41,7 +53,8 @@ body {
 
 
 .content {
-  margin: 0 auto;
+  margin: 5rem auto;
+  padding: 2rem;
   width: 100%;
   max-width: 120ch;
   background-color: white;
@@ -51,6 +64,10 @@ body {
 
 .content h1 {
   padding: 10px 0;
+}
+
+.content h2 {
+  padding: 8px 0;
 }
 
 .content p {
@@ -84,7 +101,6 @@ body {
   padding: 1.5rem 0;
   margin: auto 0;
   font-size: 20px;
-  text-decoration: none;
   background-color: white;
   color: black;
   transition: .2s;
