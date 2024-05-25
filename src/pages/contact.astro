@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Contact';
+---
+<style>
+  form {
+    padding: 5vh 5vw;
+  }
+
+  input {
+    font-size: 22px;
+    width: max(400px, 30%);
+    border: none;
+    border-bottom: 2px groove tomato;
+    outline: none;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    transition: .5s;
+  }
+
+  input:focus {
+    font-size: 24px;
+    border-bottom: 2px groove forestgreen;
+    transition: .5s;
+  }
+
+  textarea {
+    font-size: 22px;
+    resize: none;
+    width: max(300px, 60%);
+    height: 200px;
+    border: none;
+    border-bottom: 2px groove tomato;
+    outline: none;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    transition: .5s;
+  }
+
+  textarea:focus {
+    font-size: 24px;
+    border-bottom: 2px groove forestgreen;
+    transition: .5s;
+  }
+
+  button {
+    font-size: 24px;
+    width: 20%;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    margin: 8px;
+    display: inline-block;
+    color: white;
+    background: tomato;
+  }
+
+  button:hover {
+    background: forestgreen;
+    transition: .3s;
+  }
+
+  button:active {
+    opacity: 0.5
+    transition: .1s;
+  }
+</style>
+
+<BaseLayout title={pageTitle}>
+  <h1>お問い合わせフォーム</h1>
+  <hr>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <form action="https://ssgform.com/s/rybo6XKpYtzw" method="post" id="form">
+    <label for="name">お名前</label><br />
+    <input type="text" name="お名前" id="name" required="required" /><br />
+    <label for="email">メールアドレス</label><br />
+    <input type="email" name="メールアドレス" id="email" required="required" /><br />
+    <label for="content">お問い合わせ内容</label><br />
+    <textarea name="お問い合わせ内容" id="content" required="required"></textarea><br />
+    <button class="g-recaptcha"
+            data-sitekey="6LeB9ecpAAAAAF3Qjzi_bZQcGl6EaXfTt5y-kUIp"
+            data-callback="onSubmit"
+            data-action="submit">送信する</button><br />
+    <button type="reset">リセット</button>
+  </form>
+  <script is:inline>
+    function onSubmit(token) {
+      const form = document.getElementById('form');
+      if (form.reportValidity()) {
+        form.submit();
+      }
+    }
+  </script>
+</BaseLayout>
