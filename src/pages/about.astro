@@ -1,9 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Icon } from 'astro-iconify';
 
 const pageTitle = 'About me';
 ---
 
+<style>
+  img {
+    width: min(200px, 25%);
+    height: min(200px, 25%);
+    border-radius: 50%;
+    border: 2px solid tomato;
+  }
+
+  .sns-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sns-icons li {
+    display: block;
+    list-style: none;
+    width: 30px;
+    margin: 0 10px;
+  }
+</style>
+
 <BaseLayout title={pageTitle}>
-  <h1>{pageTitle}</h1>
+  <img src="/images/toma09to.png" alt="toma09toのアイコン" />
+  <h1>toma09to</h1>
+  <ul class="sns-icons">
+    <li><a href="https://x.com/toma_09to"><Icon name="ri:twitter-x-line"></Icon></a></li>
+    <li><a href="https://github.com/toma09to"><Icon name="mdi:github"></Icon></a></li>
+    <li><a href="https://msky.toma09to.com/@toma09to"><Icon name="simple-icons:misskey"></Icon></a></li>
+  </ul>
+  <hr>
+  <p>
+    低レイヤ、ネットワーク、数学、その他森羅万象に興味がある高専生。<br />
+    最近はフロントエンドと仲良くなりたい気分。<br />
+    大学への編入学に向けた勉強を頑張りたい所存。
+  </p>
 </BaseLayout>
