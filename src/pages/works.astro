@@ -4,6 +4,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'Works';
 ---
 
+<style>
+  .works {
+    display: flex;
+  }
+
+  .works-text {
+    margin: 100px;
+  }
+
+  .works img {
+    height: 400px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .works {
+      display: block;
+    }
+
+    .works-text {
+      margin: 10px;
+    }
+  }
+</style>
+
 <BaseLayout title={pageTitle}>
   <h1>{pageTitle}</h1>
+  <hr />
+  <h2><a href="https://toma09to.com/bus.html">次のバス見れるやつ</a></h2>
+  <div class="works">
+    <div class="works-text">
+      <p>
+        木更津高専生の利用するバスが複数系統×複数会社あり、某乗換案内アプリでの検索性が非常に悪かったので、発車標のように次のバスが分かりやすいサイトを作りました。<br />
+        実はHTML、CSS、JavaScriptだけで作られてます。データはベタ書き。
+      </p>
+    </div>
+    <img src="/images/next-bus.png" alt="次のバス見れるやつのイメージ" />
+  </div>
+  <h2><a href="https://github.com/toma09to">マルチプレイシューティングゲーム</a></h2>
+  <div class="works">
+    <img src="/images/shooting.png" alt="シューティングゲームのスクリーンショット" />
+    <div class="works-text">
+      <p>
+        学校のProcessingでゲームを作る課題にて制作したゲームです。<br />
+        サーバー1台とクライアント最大3台で相互に通信を行い、最大で4人での対戦が可能です。
+      </p>
+    </div>
+  </div>
 </BaseLayout>
