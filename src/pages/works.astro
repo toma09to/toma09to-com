@@ -10,11 +10,16 @@ const pageTitle = 'Works';
   }
 
   .works-text {
-    margin: 100px;
+    margin: 80px;
   }
 
   .works img {
     height: 400px;
+    margin: auto 0;
+  }
+
+  #misskeymc-img {
+    height: 250px;
   }
 
   @media screen and (max-width: 800px) {
@@ -24,6 +29,11 @@ const pageTitle = 'Works';
 
     .works-text {
       margin: 10px;
+    }
+
+    #shooting-img {
+      width: 300px;
+      height: 300px;
     }
   }
 </style>
@@ -43,12 +53,22 @@ const pageTitle = 'Works';
   </div>
   <h2><a href="https://github.com/toma09to/Processing/tree/main/shooting">マルチプレイシューティングゲーム</a></h2>
   <div class="works">
-    <img src="/images/shooting.png" alt="シューティングゲームのスクリーンショット" />
+    <img src="/images/shooting.png" id="shooting-img" alt="シューティングゲームのスクリーンショット" />
     <div class="works-text">
       <p>
         学校のProcessingでゲームを作る課題にて制作したゲームです。<br />
         サーバー1台とクライアント最大3台で相互に通信を行い、最大で4人での対戦が可能です。
       </p>
     </div>
+  </div>
+  <h2><a href="https://github.com/toma09to/MisskeyMC">MisskeyMC</a></h2>
+  <div class="works">
+    <div class="works-text">
+      <p>
+        MinecraftサーバーのチャットとMisskeyを連携するプラグインが見当たらなかったので作りました。<br />
+        Javaで書きましたが、コードが汚いし機能も不十分なのでKotlinで書き直したい気分です。
+      </p>
+    </div>
+    <img src="/images/misskeymc.png" id="misskeymc-img" alt="MisskeyMCが動作している様子" />
   </div>
 </BaseLayout>
