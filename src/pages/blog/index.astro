@@ -1,13 +1,21 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Article from "../../components/Article.astro";
+const pageTitle = "Blog";
 
-const pageTitle = 'Blog';
+// microCMS呼び出し
+import { getBlogs } from "../../library/microcms";
+const response = await getBlogs({ fields: ["id", "title", "category"] });
 ---
 
 <BaseLayout title={pageTitle}>
-  <!-- TODO: make my blog -->
-  <h1>工事中</h1>
+  <h1>記事一覧</h1>
+  <hr />
   <p>
-    microCMSと連携していい感じのブログをここに置きたい
+    {
+      response.contents.map((content: any) => (
+        <Article content={content}></Article>
+      ))
+    }
   </p>
 </BaseLayout>

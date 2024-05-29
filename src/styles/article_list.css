@@ -1,0 +1,26 @@
+.article {
+  border-radius: 20px;
+  border: 1px solid #dddddd;
+  background-color: #f8f8f8;
+  margin: 5px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.article h2 {
+  font-size: min(1.5rem, 5vw);
+  padding: 0 3rem;
+}
+
+.category {
+  margin-bottom: 1rem;
+}
+
+.category a {
+  font-size: min(1rem, 3vw);
+  border-radius: 0.5rem;
+  background-color: #dddddd;
+  margin-left: 3rem;
+  padding: 0 1rem;
+  color: black;
+}

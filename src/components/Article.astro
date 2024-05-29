@@ -1,0 +1,16 @@
+---
+import '../styles/article_list.css';
+import { type Blog } from '../library/microcms';
+interface Props {
+  content: Blog
+}
+
+const props = Astro.props;
+---
+
+<div class="article">
+  <h2><a href={"/blog/"+ props.content.id}>{props.content.title}</a></h2>
+  <div class="category">
+    <a href={"/blog/category/" + props.content.category.id}>{props.content.category.name}</a>
+  </div>
+</div>
