@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# not using Zero-Installs
+.pnp.*
+.yarn/
+.yarnrc.yml
