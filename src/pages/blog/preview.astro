@@ -3,8 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getBlogDetail } from '../../library/microcms';
 
 // 記事の詳細情報を取得
-const contentId = Astro.url.searchParams.get('contentId');
-const draftKey = Astro.url.searchParams.get('draftKey');
+let contentId = Astro.url.searchParams.get('contentId');
+let draftKey = Astro.url.searchParams.get('draftKey');
+
+if (contentId == null) contentId = "";
+if (draftKey == null) draftKey = "";
 
 const blog = await getBlogDetail(contentId, { draftKey });
 const errorTitle = 'Invalid Params';
