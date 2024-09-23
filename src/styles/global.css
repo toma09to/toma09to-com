@@ -121,9 +121,19 @@ a:focus {
 }
 
 
-figure img {
+figure {
+  display: inline-block;
   width: 100%;
-  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure img {
+  display: block;
+  width: auto;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 720px) {
