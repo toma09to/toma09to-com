@@ -12,7 +12,7 @@ docker build -t toma09to-com .
 
 - コンテナの実行
 ```sh
-docker run -p 4321:4321 --name toma09to-com toma09to-com
+docker run --rm -d -p 4321:4321 --name toma09to-com toma09to-com
 ```
 
 - コンテナの終了
