@@ -10,11 +10,16 @@ class Departure {
   }
   display(element, nowTime) {
     // Time
+    let time_div = document.createElement('div');
+    time_div.classList.add('time');
+
     let time = document.createElement('time');
     const hour = Math.floor(this.time / 60).toString().padStart(2, '0');
     const minute = (this.time % 60).toString().padStart(2, '0');
     time.textContent = hour + ':' + minute;
-    element.appendChild(time);
+
+    time_div.appendChild(time);
+    element.appendChild(time_div);
 
     // From and To
     let information = document.createElement('div');
@@ -33,13 +38,18 @@ class Departure {
     element.appendChild(information);
 
     // Remaining time
+    let remain_div = document.createElement('div');
+    remain_div.classList.add('remain');
+
     let remain = document.createElement('b');
     if (nowTime <= this.time) {
       remain.textContent = 'あと' + (this.time - nowTime) + '分';
     } else {
       remain.textContent = '';
     }
-    element.appendChild(remain);
+
+    remain_div.appendChild(remain);
+    element.appendChild(remain_div);
   }
 }
 

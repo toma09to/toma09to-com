@@ -2,54 +2,69 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>次のバス見れるやつ</title>
     <style>
       h1 {
-        font-size: 100px;
+        font-size: 10vw;
         text-align: center;
       }
       h2 {
-        font-size: 80px;
+        font-size: 8vw;
         text-align: center;
+      }
+      #from-kosen {
+        margin-left: auto;
+        margin-right: auto;
       }
       p {
         box-sizing: border-box;
         width: 100%;
-        height: 200px;
-        border: 10px solid aquamarine;
-        border-radius: 20px;
+        height: 20vw;
+        margin: 0;
+        margin-bottom: 2vw;
+        border: 1.5vw solid aquamarine;
+        border-radius: 5vw;
         display: flex;
         justify-content: space-between;
       }
+      .time {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
       time {
-        font-size: 140px;
-        padding-top: 20px;
+        font-size: 12vw;
       }
       .rollsign {
         display: block;
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        justify-content: center;
       }
       i {
         text-align: center;
         font-style: normal;
+        margin: 0;
       }
       .departure {
-        font-size: 70px;
+        font-size: 8vw;
         font-weight: 600;
-        padding-top: 30px;
       }
       .destination{
-        font-size: 30px;
-        padding-bottom: 20px;
+        font-size: 4vw;
+      }
+      .remain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       b {
-        padding-top: 80px;
-        padding-right: 20px;
-        font-size: 60px;
+        font-size: 6vw;
         text-align: center;
-        width: 300px;
+        margin-right: 3vw;
       }
       img {
         display: block;
@@ -59,22 +74,25 @@
       }
       footer {
         text-align: center;
+        font-size: 3vw;
       }
     </style> 
   </head>
   <body>
-    <noscript>JavaScriptが必要です!!!</noscript>
-    <div id="from-kosen">
-      <h1>高専&rarr;木更津駅</h1>
-      <h2 id="no-bus-0">バスないよ(笑)</h2>
+    <div id="body">
+      <noscript>JavaScriptが必要です!!!</noscript>
+      <div id="from-kosen">
+        <h1>高専&rarr;木更津駅</h1>
+        <h2 id="no-bus-0">バスないよ(笑)</h2>
+      </div>
+      <!--<a href="https://msky.toma09to.com"><img src="assets/images/misskey_ad.png"></a>-->
+      <div id="to-kosen">
+        <h1>木更津駅&rarr;高専</h1>
+        <h2 id="no-bus-1">バスないよ(笑)</h2>
+      </div>
+      <script src="https://cdn.jsdelivr.net/gh/osamutake/japanese-holidays-js@v1.0.10/lib/japanese-holidays.min.js"></script>
+      <script src="bus.js"></script>
+      <footer>間違い等ありましたら、<a href="https://twitter.com/toma_09to">toma09to</a>までご連絡ください。<br>このサイトを利用したことによる損害について、当方は一切の責任を負いません。</footer>
     </div>
-    <!--<a href="https://msky.toma09to.com"><img src="assets/images/misskey_ad.png"></a>-->
-    <div id="to-kosen">
-      <h1>木更津駅&rarr;高専</h1>
-      <h2 id="no-bus-1">バスないよ(笑)</h2>
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/osamutake/japanese-holidays-js@v1.0.10/lib/japanese-holidays.min.js"></script>
-    <script src="bus.js"></script>
-    <footer>間違い等ありましたら、<a href="https://twitter.com/toma_09to">toma09to</a>までご連絡ください。<br>このサイトを利用したことによる損害について、当方は一切の責任を負いません。</footer>
   </body>
 </html>
