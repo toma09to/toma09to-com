@@ -18,10 +18,13 @@ const errorTitle = 'Invalid Params';
 // Syntax highlighting
 const $ = load(blog.content);
 $("pre code").each((_, elm) => {
-  const lang = $(elm).attr("class").replace("language-", "");
-  const result = hljs.highlight($(elm).text(), {language: lang});
-  $(elm).html(result.value);
-  $(elm).addClass("hljs");
+  const classes = $(elm).attr("class")
+  if (classes !== undefined) {
+    const lang = classes.replace("language-", "");
+    const result = hljs.highlight($(elm).text(), {language: lang});
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  }
 });
 blog.content = $.html();
 ---
