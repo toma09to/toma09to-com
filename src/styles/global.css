@@ -139,6 +139,14 @@ figure img {
   object-fit: contain;
 }
 
+pre code {
+    width: 80%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+}
+
 @media screen and (max-width: 720px) {
   .hamburger {
     display: block;

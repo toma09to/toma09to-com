@@ -159,5 +159,5 @@ code.hljs {
 /* for v10 compatible themes */
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
-  font-weight: bold
+  /*font-weight: bold*/
 }
