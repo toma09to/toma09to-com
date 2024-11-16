@@ -71,7 +71,7 @@ const pageTitle = 'Contact';
 <BaseLayout title={pageTitle}>
   <h1>お問い合わせフォーム</h1>
   <hr>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
   <form action="https://ssgform.com/s/rybo6XKpYtzw" method="post" id="form">
     <label for="name">お名前</label><br />
     <input type="text" name="お名前" id="name" required="required" /><br />
