@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/node": "^8.2.5",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/node": "^9.0.1",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.9.1",
+    "astro": "^5.1.7",
     "astro-iconify": "^1.2.0",
     "cheerio": "^1.0.0",
     "highlight.js": "^11.10.0",
