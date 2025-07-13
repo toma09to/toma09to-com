@@ -18,27 +18,45 @@ const pageTitle = 'Works';
     margin: auto 0;
   }
 
+  #shooting-web-img {
+    height: 300px;
+  }
+
   #misskeymc-img {
     height: 250px;
   }
 
   @media screen and (max-width: 800px) {
     .works {
-      display: block;
+      flex-flow: column;
     }
 
     .works-text {
       margin: 10px;
     }
 
+    #bus-img {
+      width: 40%;
+      height: auto;
+      margin: 0 auto;
+    }
+
     #shooting-img {
-      width: 300px;
-      height: 300px;
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+      order: 1;
+    }
+
+    #shooting-web-img {
+      width: 100%;
+      height: auto;
     }
 
     #misskeymc-img {
       width: 100%;
       height: auto;
+      order: 1;
     }
   }
 </style>
@@ -54,7 +72,7 @@ const pageTitle = 'Works';
         実はHTML、CSS、JavaScriptだけで作られてます。データはベタ書き。
       </p>
     </div>
-    <img src="/images/next-bus.png" alt="次のバス見れるやつのイメージ" />
+    <img src="/images/next-bus.png" id="bus-img" alt="次のバス見れるやつのイメージ" />
   </div>
   <h2><a href="https://github.com/toma09to/Processing/tree/main/shooting">マルチプレイシューティングゲーム</a></h2>
   <div class="works">
@@ -66,16 +84,26 @@ const pageTitle = 'Works';
       </p>
     </div>
   </div>
+  <h2><a href="https://shooting.toma09to.com">マルチプレイシューティングゲーム（Web版）</a></h2>
+  <div class="works">
+    <div class="works-text">
+      <p>
+        上作のWeb移植版を、学校のゲーム制作の課題にて制作しました。<br />
+        自由にルームを作成することができ、各ルームにつき最大4人対戦が可能です。<br />
+        また、ルームの観戦もすることができます。
+      </p>
+    </div>
+    <img src="/images/shooting_web.png" id="shooting-web-img" alt="シューティングゲームのスクリーンショット" />
+  </div>
   <h2><a href="https://github.com/toma09to/MisskeyMC">MisskeyMC</a></h2>
   <div class="works">
+    <img src="/images/misskeymc.png" id="misskeymc-img" alt="MisskeyMCが動作している様子" />
     <div class="works-text">
       <p>
         MinecraftサーバーのチャットとMisskeyを連携するプラグインが見当たらなかったので作りました。<br />
         Javaで書きましたが、コードが汚いし機能も不十分なのでKotlinで書き直したい気分です。<br />
         <ins>追記: Kotlinで書き直しました</ins>
       </p>
-
     </div>
-    <img src="/images/misskeymc.png" id="misskeymc-img" alt="MisskeyMCが動作している様子" />
   </div>
 </BaseLayout>
